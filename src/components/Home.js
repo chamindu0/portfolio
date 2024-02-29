@@ -7,7 +7,7 @@ const Home = () => {
   <div name="Home" className='h-screen w-full bg-gradient-to-b from-black to-gray-800 '>
 
      <div className='flex flex-col justify-center items-baseline h-full  ' >
-         <div className='flex flex-col w-full mt-52  px-10  lg:flex-row lg:px-60  md:px-60'>
+         <div className='flex flex-col w-full mt-52  px-9  lg:flex-row lg:px-60  md:px-60'>
            <div>
               <h2 className='text-4xl sm:text-6xl font-bold text-white  '>
                 I'm a Full Stack 
@@ -31,7 +31,7 @@ const Home = () => {
              </div>     
               </div>  
               <div className='px-14'>
-                  <img src={heroImage} alt="my-profile" className='p-2 h-80 max-w-72 mx-auto w-max shadow-md hover:scale-105 duration-500 rounded-2xl shadow-sky-500 s mt-24 lg:mt-0  md:mt-0 ' />
+                  <img src={heroImage} alt="my-profile" className='p-2 h-80 max-w-72 mx-auto w-max shadow-md hover:scale-105 duration-500 rounded-2xl shadow-sky-500  mt-24 lg:mt-0  md:mt-0 ' />
               </div>
         </div>
       </div>

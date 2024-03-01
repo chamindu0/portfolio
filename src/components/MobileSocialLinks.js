@@ -1,27 +1,27 @@
-
+import React from 'react'
 import {FaGithub,FaLinkedin} from 'react-icons/fa' 
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 
-const SocialLinks = () => {
+const MobileSocialLinks = () => {
 
         const links =[
         {
             id:1,
             child:(
                 <>
-                LinkedIn <FaLinkedin size={30}/>
+               <FaLinkedin size={30}/>
                 </>
             ),
             href:'https://www.linkedin.com/in/chamindu-yasintha-676266241/',
-            style:'rounded-tr-md'
+            style:'rounded-bl-md rounded-tl-md'
         },
         {
             id:2,
             child:(
                 <>
-                GitHub <FaGithub size={30}/>
+                <FaGithub size={30}/>
                 </>
             ),
             href:'https://github.com/chamindu0',
@@ -31,7 +31,7 @@ const SocialLinks = () => {
             id:3,
             child:(
                 <>
-                mail <HiOutlineMail size={30}/>
+                <HiOutlineMail size={30}/>
                 </>
             ),
             href:'mailto:igcysenarathna@gmail.com',
@@ -41,12 +41,13 @@ const SocialLinks = () => {
             id:4,
             child:(
                 <>
-                Resume <BsFillPersonLinesFill size={30}/>
+                 <BsFillPersonLinesFill size={30}/>
                 </>
             ),
             href:'/resume.pdf',
             download:true,
-            style:'rounded-br-md'
+            style:'rounded-br-md rounded-tr-md'
+            
         },
 
     ]
@@ -55,12 +56,12 @@ const SocialLinks = () => {
     return(
   
 
-        <div  className='flex flex-col top-[35%] fixed  '>
-        <ul>
+        <div  className='flex flex-row  justify-center  bg-gradient-to-b from-black to-gray-800 p-12 text-white h-40 '>
+        
             {links.map(({id,child,href,style,download})=>(
-            <li key={id} className={"hidden lg:flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500 "  + style}>
+            <div key={id} className={"msm:hidden lg:hidden  lg:flex items-stretch pt-5 w-20 h-20 px-4 mb-[-100px] hover:mt-[-50px] hover:rounded-md duration-300  bg-gray-500 "  + style}>
                 <a href={href}
-                className='flex justify-between items-center w-full text-white'
+                className='flex  text-white'
                 download={download}
                 target='_blank'
                 rel='noreferrer'
@@ -69,15 +70,15 @@ const SocialLinks = () => {
                 {child}
                 </>
                 </a>
-            </li>        
+            </div>        
             
             ))}
 
-        </ul>
+        
         </div> 
    
     )
   
 }
 
-export default SocialLinks
+export default MobileSocialLinks

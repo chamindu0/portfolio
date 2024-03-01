@@ -4,18 +4,18 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import {Link} from 'react-scroll';
 const Home = () => {
   return (
-  <div name="Home" className='h-screen w-full bg-gradient-to-b from-black to-gray-800 '>
+  <div name="Home" className='h-100 w-full bg-gradient-to-b from-black to-gray-800 '>
 
      <div className='flex flex-col justify-center items-baseline h-full  ' >
          <div className='flex flex-col w-full mt-52  px-9  lg:flex-row lg:px-60  md:px-60'>
            <div>
               <h2 className='text-4xl sm:text-6xl font-bold text-white  '>
-                I'm a Full Stack 
+                I'm a Web 
                 Developer
               </h2>
               <p className='text-gray-500 py-4 max-w-md'>
                   Currently,I love to work on web appliction using technologies like
-                  React,Express,MongoDB,Node.js .
+                  React,Node.js .
               </p>
               
               <div c>

@@ -1,35 +1,50 @@
 import React from "react";
-import arrayDestruct from "../assests/portfolio/1.png";
-import installNode from "../assests/portfolio/2.png";
-import navbar from "../assests/portfolio/3.png";
-import reactParallax from "../assests/portfolio/4.png";
-import reactSmooth from "../assests/portfolio/5.png";
-import reactWeather from "../assests/portfolio/6.png";
+import MovieApp from "../assests/portfolio/1.png";
+import JavaGame from "../assests/portfolio/2.png";
+import ReadList from "../assests/portfolio/3.png";
+import SimpleBlog from "../assests/portfolio/4.png";
+import PortfolioSite from "../assests/portfolio/5.png";
+import BussinessWebsite from "../assests/portfolio/6.png";
 const Portfolio = () => {
   const portfolio = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: PortfolioSite,
+      codeLink:"https://github.com/chamindu0/portfolio.git",
+      demoLink:"https://chaminduyasintha.netlify.app/"      
+
     },
     {
       id: 2,
-      src: installNode,
+      src: MovieApp,
+      codeLink:"https://github.com/chamindu0/Movie_app.git",
+      demoLink:"https://movieapplicationdemo.netlify.app/"      
+
     },
     {
       id: 3,
-      src: navbar,
+      src:JavaGame,
+      codeLink:"https://github.com/chamindu0/reading-list.git",
+      demoLink:"https://javagamedemo.netlify.app/"
     },
     {
       id: 4,
-      src: reactParallax,
+      src: ReadList,
+      codeLink:"https://github.com/chamindu0/reading-list.git",
+      demoLink:"https://readinglistdemo.netlify.app/"
     },
     {
       id: 5,
-      src: reactSmooth,
+      src: BussinessWebsite,
+      codeLink:"https://github.com/chamindu0/modern_bussiness_websit.git",
+      demoLink:"https://bussinesswebsitedemo.netlify.app//"
     },
     {
       id: 6,
-      src: reactWeather,
+      src: SimpleBlog,
+      codeLink:"https://github.com/chamindu0/react-blog.git",
+      demoLink:"https://simplereactblogdemo.netlify.app"      
+
     },
   ];
   return (
@@ -46,7 +61,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolio.map(({ id, src }) => (
+          {portfolio.map(({ id, src,codeLink,demoLink }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -54,10 +69,10 @@ const Portfolio = () => {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button onClick={()=>window.location.href= demoLink } className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Demo
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button onClick={()=>window.location.href=codeLink} className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Code
                 </button>
               </div>
